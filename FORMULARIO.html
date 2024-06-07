@@ -10,51 +10,62 @@
 <body>
     <div class="container mt-5">
         <h1 class="text-center">Formulário Hotel</h1>
-        <form action="#" method="post" class="mt-4">
+        <form id="hotelForm" class="mt-4" onsubmit="return validateForm()">
             <div class="form-group">
                 <label for="Nome">Nome completo:</label>
-                <input type="text" class="form-control" name="Nome" id="Nome">
+                <input type="text" class="form-control" name="Nome" id="Nome" required>
+            </div>
+            <div class="form-group">
+                <label for="CPF">CPF:</label>
+                <input type="text" class="form-control" name="CPF" id="CPF" required>
             </div>
             <div class="form-group">
                 <label for="selecao">Sexo:</label>
-                <select class="form-control" name="selecao" id="selecao">
+                <select class="form-control" name="selecao" id="selecao" required>
                     <option value="M">Masculino</option> 
                     <option value="F">Feminino</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="Email">Email:</label>
-                <input type="email" class="form-control" name="Email" id="Email">
+                <input type="email" class="form-control" name="Email" id="Email" required>
             </div>
             <div class="form-group">
                 <label for="Data_Chegada">Data de chegada:</label>
-                <input type="date" class="form-control" name="Data_Chegada" id="Data_Chegada">
+                <input type="text" class="form-control" name="Data_Chegada" id="Data_Chegada" required>
             </div>
             <div class="form-group">
                 <label for="Numero_noites">Número de noites:</label>
-                <input type="number" class="form-control" name="Numero_noites" id="Numero_noites">
+                <input type="number" class="form-control" name="Numero_noites" id="Numero_noites" required>
             </div>
             <div class="form-group">
                 <label for="Numero_hos">Número de hóspedes:</label>
-                <input type="number" class="form-control" name="Numero_hos" id="Numero_hos">
-            </div>
-            <div class="form-group">
-                <p>Total estimado: R$: 2000</p>
+                <input type="number" class="form-control" name="Numero_hos" id="Numero_hos" required>
             </div>
             <div class="form-group">
                 <label for="mensagem">Deixe sua mensagem:</label>
                 <textarea id="mensagem" class="form-control" rows="5"></textarea>
             </div>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" name="Aceite" id="Aceite">
+                <input type="checkbox" class="form-check-input" name="Aceite" id="Aceite" required>
                 <label class="form-check-label" for="Aceite">Aceite</label>
             </div>
+            <div class="form-group">
+                <label for="valor_estadia">Valor da estadia:</label>
+                <input type="text" class="form-control" id="valor_estadia" readonly>
+            </div>
             <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+            <button type="button" class="btn btn-secondary mt-3" onclick="calculateStayValue()">Calcular</button>
+        
+       
         </form>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
