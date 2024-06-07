@@ -101,4 +101,21 @@ textarea {
     background-color: #e0e0e0;
 }
 
-           
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+
+.form-control:hover {
+    border-color: #777;
+    transition: border-color 0.3s ease;
+}
+
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}

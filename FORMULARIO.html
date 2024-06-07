@@ -4,28 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Hotel</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body>
-    <h1>Formulário Hotel</h1>
-    <form action="#" method="post">
-        <p>Nome completo: <input type="text" name="Nome" id="Nome"> </p>
-        <p>Sexo: 
-            <select name="selecao" id="selecao">
-                <option value="M">Masculino</option> 
-                <option value="F">Feminino</option>
-            </select> 
-        </p>
-        <p>Email: <input type="email" name="Email" id="Email"> </p>
-        <p>Data de chegada: <input type="date" name="Data_Chegada" id="Data_Chegada"></p>
-        <p>Número de noites: <input type="number" name="Numero_noites" id="Numero_noites"></p>
-        <p>Número de hóspedes: <input type="number" name="Numero_hos" id="Numero_hos"></p>
-        <p>Total estimado: R$: 2000</p>       
-        <p>Deixe sua mensagem:
-            <textarea id="mensagem" rows="5" cols="33"></textarea>
-        </p>
-        <p>Aceite <input type="checkbox" name="Aceite" id="Aceite"></p>
-        <p><button type="submit" class="button">Enviar</button></p>
-    </form>
+    <div class="container mt-5">
+        <h1 class="text-center">Formulário Hotel</h1>
+        <form action="#" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="Nome">Nome completo:</label>
+                <input type="text" class="form-control" name="Nome" id="Nome">
+            </div>
+            <div class="form-group">
+                <label for="selecao">Sexo:</label>
+                <select class="form-control" name="selecao" id="selecao">
+                    <option value="M">Masculino</option> 
+                    <option value="F">Feminino</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="email" class="form-control" name="Email" id="Email">
+            </div>
+            <div class="form-group">
+                <label for="Data_Chegada">Data de chegada:</label>
+                <input type="date" class="form-control" name="Data_Chegada" id="Data_Chegada">
+            </div>
+            <div class="form-group">
+                <label for="Numero_noites">Número de noites:</label>
+                <input type="number" class="form-control" name="Numero_noites" id="Numero_noites">
+            </div>
+            <div class="form-group">
+                <label for="Numero_hos">Número de hóspedes:</label>
+                <input type="number" class="form-control" name="Numero_hos" id="Numero_hos">
+            </div>
+            <div class="form-group">
+                <p>Total estimado: R$: 2000</p>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Deixe sua mensagem:</label>
+                <textarea id="mensagem" class="form-control" rows="5"></textarea>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="Aceite" id="Aceite">
+                <label class="form-check-label" for="Aceite">Aceite</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
