@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de Números Inteiros Positivos</title>
+</head>
+<body>
+    <h1>Divisão de Números Inteiros Positivos</h1>
+    <button onclick="solicitarNumeros()">Inserir Números</button>
+    <p id="resultado"></p>
+
+    <script>
+        function solicitarNumeros() {
+            let numeros = [];
+            let validos = false;
+
+            while (!validos) {
+                let num1 = parseInt(prompt("Insira o primeiro número inteiro positivo:"));
+                let num2 = parseInt(prompt("Insira o segundo número inteiro positivo:"));
+
+                if (Number.isInteger(num1) && num1 > 0 && Number.isInteger(num2) && num2 > 0) {
+                    numeros[0] = num1;
+                    numeros[1] = num2;
+                    validos = true;
+                } else {
+                    alert("Por favor, insira números inteiros positivos.");
+                }
+            }
+
+            let resultado = numeros[0] / numeros[1];
+            document.getElementById("resultado").innerText = `O resultado da divisão é: ${resultado}`;
+        }
+    </script>
+</body>
+</html>
